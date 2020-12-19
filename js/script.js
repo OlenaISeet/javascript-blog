@@ -1,9 +1,6 @@
 {
     'use strict';
-    /*document.getElementById('test-button').addEventListener('click', function() {
-        const links = document.querySelectorAll('.titles a');
-        console.log('links:', links);
-    });*/
+
     const titleClickHandler = function(event) {
         event.preventDefault();
         const clickedElement = this;
@@ -33,12 +30,6 @@
         targetArticle.classList.add('active');
     }
 
-    const links = document.querySelectorAll('.titles a');
-
-    for (let link of links) {
-        link.addEventListener('click', titleClickHandler);
-    }
-
     /*generateTitleLinks*/
 
     const optArticleSelector = '.post';
@@ -49,6 +40,7 @@
     console.log('optTitleListSelector:', optTitleListSelector);
 
     const generateTitleLinks = function(customSelector = '') {
+        console.log('customSelector:', customSelector);
 
         /* remove contents of titleList */
         const titleList = document.querySelector(optTitleListSelector);
@@ -58,7 +50,9 @@
         /* for each article */
         const articles = document.querySelectorAll(optArticleSelector + customSelector);
         console.log('articles:', articles);
+
         let html = '';
+
         for (let article of articles) {
             console.log('article:', article);
 
@@ -85,6 +79,5 @@
             link.addEventListener('click', titleClickHandler);
         }
     }
-
     generateTitleLinks();
 }
