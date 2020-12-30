@@ -65,7 +65,7 @@
             const articleTitle = article.querySelector(optTitleSelector).innerHTML;
             console.log('articleTitle:', articleTitle);
             /* create HTML of the link */
-            const linkHTML = '<li><a href="#' + articleId + '"<span>' + articleTitle + '</span></a></li>';
+            const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
             console.log('linkHTML:', linkHTML);
             /* insert link into titleList */
             html = html + linkHTML;
