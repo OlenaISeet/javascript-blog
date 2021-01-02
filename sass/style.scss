@@ -96,6 +96,7 @@ body {
 .list-horizontal {
     li {
         display: inline-block;
+        margin-right: 5px;
     }
 }
 
@@ -127,4 +128,26 @@ body {
     p {
         margin: 0 10px 0 0;
     }
+}
+
+
+/*Tags*/
+.tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    line-height: 1.0;
+    justify-content: space-around;
+}
+.tag-size-1 {
+    font-size: 15px;
+    padding-right: 10px;
+}
+.tag-size-3 {
+    font-size: 21px;
+    padding-right: 10px;
+}
+.tag-size-5 {
+    font-size: 27px;
+    padding-right: 10px;
 }
